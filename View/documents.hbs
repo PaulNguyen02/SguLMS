@@ -1,0 +1,86 @@
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="inbox-head">
+                <h3>Tải tài liệu tham khảo</h3>
+                <form action="/Subjectselect/Search" class="pull-right position search_inbox" method="POST">
+                    <div class="input-append">
+                        <select class="sr-input" name="specialize" id="filter">
+                            <option value="it">Công nghệ thông tin</option>
+                            <option value="elec">Điện tử viễn thông</option>
+                            <option value="dan">Ngôn ngữ anh</option>
+                            <option value="acc">Kế toán</option>
+                            <option value="mkt">Marketing</option>
+                        </select>
+                        <input type="text" class="sr-input" name="search" list="searchlist" placeholder="Tìm kiếm tên tài liệu">
+                        <datalist id="searchlist">
+                            <option value="author">Tác giả</option>  
+                            <!--{{#each datalist}} 
+                                <option value="{{this.MAMH}}">{{this.TENMH}}</option>  
+                            {{/each}} -->
+                        </datalist>
+                        <datalist id="searchlist">
+                            <option value="subject">Môn học</option>  
+                            <!--{{#each datalist}} 
+                                <option value="{{this.MAMH}}">{{this.TENMH}}</option>  
+                            {{/each}} -->
+                        </datalist>
+                        <button class="btn sr-btn" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <table class="table">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên tài liệu</th>
+                            <th>Tên tác giả</th>
+                            <th>Môn học</th>
+                            <th>Ngành học</th>
+                            <th>Tải xuống</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--{{#each result}} -->
+                            <form>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Ứng dụng của AI trong công nghệ thông tin</td>
+                                    <td>Trần Văn Bách</td>
+                                    <td>Phương pháp nghiên cứu khoa học</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td><button type="submit"><i class="fa fa-download" aria-hidden="true"></i></button></td>
+                                </tr>
+                            </form>
+                        <!--{{/each}} -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Script/jquery.min.js"></script>
+<script src="/Script/popper.min.js"></script>
+<script src="/Script/bootstrap.min.js"></script>
+<!-- wow animation -->
+<script src="/Script/animate.js"></script>
+<!-- select country -->
+<script src="/Script/bootstrap-select.js"></script>
+<!-- owl carousel -->
+<script src="/Script/owl.carousel.js"></script> 
+<!-- chart js -->
+<script src="/Script/Chart.min.js"></script>
+<script src="Script/Chart.bundle.min.js"></script>
+<script src="/Script/utils.js"></script>
+<script src="/Script/analyser.js"></script>
+<!-- nice scrollbar -->
+<script src="/Script/perfect-scrollbar.min.js"></script>
+<script>
+var ps = new PerfectScrollbar('#sidebar');
+</script>
+<!-- custom js -->
+<script src="/Script/custom.js"></script>
+<script src="/Script/chart_custom_style1.js"></script>   

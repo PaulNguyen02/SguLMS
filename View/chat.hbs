@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-lg-12">
+            <div class="card chat-app">
+                <form id='myForm' class="chat" >
+                    <div class="chat-header clearfix">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                </a>
+                                <div class="chat-about">
+                                    <h6 class="m-b-0">SGU Virtual Tutor</h6>
+                                    <small>Active</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-history">
+                        <ul id="block" class="m-b-0">
+                            <li class="clearfix">
+                                <div id="title" class="message-data text-right"> </div>                                
+                            </li> 
+                            <li class="clearfix">
+                                <div id="header" class="message-data"> </div>                                                               
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="chat-message clearfix">
+                        <div class="input-group mb-0">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-primary btn-sm" type="button" onclick="getAnswer()"><i class="fa fa-send"></i></button>
+                            </div>
+                            <input id="question" name="chat" type="text" class="form-control" placeholder="Enter text here...">  
+                            <script>                                
+                                async function getAnswer() {
+                                    const question = document.getElementById('question').value; 
+                                    showQuestion(question);                                   
+                                    const response = await fetch('Giasuao/Result', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                        },
+                                        body: JSON.stringify({ question }),
+                                    });
+                                    const data = await response.json();
+                                    showAnswer(data);
+                                }    
+                            </script>                                  
+                        </div>
+                    </div>
+                </form>              
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Script/jquery.min.js"></script>
+<script src="/Script/popper.min.js"></script>
+<script src="/Script/bootstrap.min.js"></script>
+<!-- wow animation -->
+<script src="/Script/animate.js"></script>
+<!-- select country -->
+<script src="/Script/bootstrap-select.js"></script>
+<!-- owl carousel -->
+<script src="/Script/owl.carousel.js"></script> 
+<!-- chart js -->
+<script src="/Script/Chart.min.js"></script>
+<script src="/Script/Chart.bundle.min.js"></script>
+<script src="/Script/utils.js"></script>
+<script src="/Script/analyser.js"></script>
+<!-- nice scrollbar -->
+<script src="/Script/perfect-scrollbar.min.js"></script>
+<script>
+var ps = new PerfectScrollbar('#sidebar');
+</script>
+<!-- custom js -->
+<script src="/Script/custom.js"></script>
+<script src="/Script/chart_custom_style1.js"></script>   
+<script src="/Script/chat.js"></script>   
